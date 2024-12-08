@@ -15,9 +15,11 @@ class CreateRecipe(FormView):
     success_url = reverse_lazy('recipes:home')
 
     def form_valid(self, form):
+        recipe = form.save(commit=False)
+        recipe.author = self.request.user
+        recipe.save()
         data = form.cleaned_data
         print(data)
-        form.save()
         return super().form_valid(form)
     
 
