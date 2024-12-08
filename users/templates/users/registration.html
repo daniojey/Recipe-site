@@ -1,0 +1,12 @@
+<h2>Регистрация</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    {% if form.errors %}
+        {% for error in form.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+    <button type='submit'>Зарегестрироватся </button>
+</form>
