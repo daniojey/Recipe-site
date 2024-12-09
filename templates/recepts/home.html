@@ -1,2 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <a href="{% url "recipes:create_recipe" %}">Додати свій рецепт</a>
 <a href="{% url "recipes:recipes_page" %}">Все рецепты</a>
+{% endblock %}

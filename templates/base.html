@@ -1,19 +1,21 @@
 <html>
 <head>
-
+{% load static %}
+<link rel="stylesheet" href="{% static "css/base.css" %}">
 </head>
 
 <header>
-    <div>
+    <div class='header-container'>
         <div>
             <a href="{% url "recipes:recipes_page" %}">Все рецепты</a>
+            <a href="{% url "recipes:create_recipe" %}">Добавить рецепт</a>
         </div>
 
         <div>
             {% if user.is_authenticated %}
-                Hi {{ user.username }}|<a href="{% url "users:logout" %}">logout</a>
+                Hi {{ user.username }} | <a href="{% url "users:logout" %}">Выйти</a>
             {% else %}
-                <a href="{% url 'users:login' %}">Login</a>
+                <a href="{% url 'users:login' %}">Войти</a>
             {% endif %}
         </div>
     </div>

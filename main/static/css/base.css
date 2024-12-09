@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    overflow-y: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    font-size: 20px;
+    background-color: rgba(27, 27, 27, 0.932);
+    color: bisque;
+}
+
+.header-container a{
+    color: bisque;
+    text-decoration: none;
+    transition: color 0.5s ease;
+    padding: 5px;
+}
+
+.header-container a:hover{
+    color: rgb(255, 255, 255);
+}

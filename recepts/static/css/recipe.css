@@ -1,0 +1,22 @@
+.base-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(27, 27, 27, 0.932);
+    margin: 40px auto;
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.recipe-container {
+    background-color: azure;
+    border-radius: 15px;
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+}

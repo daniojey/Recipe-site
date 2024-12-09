@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-{% for recipe in recipes %}
-    <h2>{{ recipe.title }}</h2>
-    <p>{{ recipe.body }}</p>
-{% endfor %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/recipe.css" %}">
+<div class='base-container'>
+
+    {% for recipe in recipes %}
+    <div class='recipe-container'>
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.body|truncatechars:55 }}</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
